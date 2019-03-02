@@ -194,6 +194,8 @@ static MouseShortcut mshortcuts[] = {
 
 /* Internal keyboard shortcuts. */
 #define MODKEY Mod1Mask
+#define TERMMOD (ControlMask|ShiftMask)
+
 
 MouseKey mkeys[] = {
 	/* button               mask            function        argument */
@@ -241,6 +243,7 @@ static Shortcut shortcuts[] = {
 	{ MODKEY|ShiftMask,     XK_U,           zoom,           {.f = +2} },
 	{ MODKEY|ShiftMask,     XK_D,           zoom,           {.f = -2} },
     	{ MODKEY,		XK_l,		externalpipe,	{ .v = openurlcmd } },
+  { ControlMask,              XK_u,      keyboard_select,{ 0 } },
 };
 
 /*
